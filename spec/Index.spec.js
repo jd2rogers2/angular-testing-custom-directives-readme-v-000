@@ -14,4 +14,11 @@ describe('Directive Test', function() {
 		expect(count.getInnerHtml()).toEqual('Current count: 1');
 	});
 
+	it('should increment twice more when clicked twice', function(){
+		counter.click();
+		counter.click();
+
+		expect(count.getInnerHtml()).toEqual('Current count: 3');
+	});
+
 });
